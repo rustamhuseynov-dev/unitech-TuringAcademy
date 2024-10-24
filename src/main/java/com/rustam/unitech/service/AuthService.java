@@ -26,7 +26,6 @@ public class AuthService {
     UserRepository userRepository;
     UserDetailsServiceImpl userDetailsService;
     JwtService jwtService;
-    RedisTemplate redisTemplate;
 
     public AuthResponse login(AuthRequest authRequest) {
         User user = userRepository.findByUsername(authRequest.getUsername())
